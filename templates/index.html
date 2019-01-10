@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Project 2</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="static/css/one-page-wonder.min.css" rel="stylesheet">
+    <link href="static/css/one-page-wonder.css" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/d3Style.css">
+
+    <!-- Leaflet CSS & JS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" 
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js" 
+    integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q==" 
+    crossorigin=""></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin="" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.3.0/dist/MarkerCluster.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.3.0/dist/MarkerCluster.Default.css" />
+  
+    <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js" integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw==" crossorigin=""></script>
+    <script src="https://unpkg.com/leaflet.markercluster@1.3.0/dist/leaflet.markercluster.js"></script>
+  
+    <!-- D3 JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+
+    <!-- Our CSS -->
+    <link rel="stylesheet" type="text/css" href="static/css/one-page-wonder.css">
+    <link rel="stylesheet" type="text/css" href="static/css/one-page-wonder.min.css">
+    <link rel="stylesheet" type="text/css" href="static/css/style.css">
+
+    <!-- chart2 scripts -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+
+    <!-- Google chart -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <!-- Icon Issue --> 
+    <link rel="shortcut icon" href="#" />
+
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="/">Project 2</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/gblack686/Project2_UCI">GitHub</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="LM.html">Learn More</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="Datasource.html">Data Source</a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="text-center text-white">
+      <div class="jumbotron big-banner" style="height: 609px; padding-top: 200px;">
+      <!-- <div class="masthead-content"> -->
+        <div class="container">
+          <h1 class="masthead-heading mb-0">Housing D&S</h1>
+          <h2 class="masthead-subheading mb-0">Housing Data and Statistics</h2>
+          <a href="LM.html" class="btn btn-primary btn-xl rounded-pill mt-5">Learn More</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Map 1 -->
+    <section>
+      <div class="container">
+        <div class="row align-items-center" align="center">
+          <div class="col-lg-3">
+            <div class="p-8">
+<!--               <img class="img-fluid rounded-circle" src="static/img/01.jpg" alt="">
+ -->            </div>
+          </div>
+
+          <div class="col-lg-6 order-med-1">
+            <div class="p-10">
+              <h2 class="display-4">View 1 Map</h2>
+              <p>Our first view is a map with all of the available new houses in that area. Click on a number to zoom in and view the number of houses. Click on the house itself to see the address, bed, bath and more.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div id="map" style="height:600px"></div>
+          <div class="row align-items-center">
+        </div>
+      </div>
+    </section>
+    <hr>
+
+    <!-- Map View 2 -->
+    <section>
+      <div class="container">
+        <div class="row align-items-center" align="center">
+          <div class="col-lg-3">
+            <div class="p-8">
+<!--               <img class="img-fluid rounded-circle" src="static/img/01.jpg" alt="">
+ -->            </div>
+          </div>
+
+          <div class="col-lg-6 order-med-1">
+            <div class="p-10">
+              <h2 class="display-4">View 2 Chart</h2>
+              <p>Our second view is a graph created by using Google Charts. From the drop down bar, you can select your house to run comparisons between the selected house's price, vs. the average pricing in that category.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+      <section>
+      <div class="well" style="text-align: center">
+          <h2>Select Property:</h2>
+          <select id="selProperty" onchange="optionChanged(this.value)"></select>
+        </div>
+      </section>
+
+      <section>
+      <div class="container">
+        <div id="pie_div" align="center" "></div>
+          <div class="row align-items-center">
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div id="bar_div1" align="center" "></div>
+          <div class="row align-items-center">
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div id="bar_div2" align="center" style="padding-top: 20px"></div>
+          <div class="row align-items-center">
+        </div>
+      </div>
+    </section>
+
+      <hr>
+
+    <!-- View 3 -->
+    <section>
+      <div class="container">
+        <div class="row align-items-center" align="center">
+          <div class="col-lg-3">
+            <div class="p-8">
+<!--               <img class="img-fluid rounded-circle" src="static/img/01.jpg" alt="">
+ -->            </div>
+          </div>
+
+          <div class="col-lg-6 order-med-1">
+            <div class="p-10">
+              <h2 class="display-4">View 3 Graph</h2>
+              <p>Our third view is a chart that shows a the comparison between pricing and square feet and the number of bed and baths.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+        <div class="container">
+        <div id="secondChart">
+
+      </div>
+      </div>
+      
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-5 bg-black">
+      <div class="container">
+        <p class="m-0 text-center text-white small">Copyright &copy; Your Website 2018</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="static/vendor/jquery/jquery.min.js"></script>
+    <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- API KEY -->
+    <script type="text/javascript" src="static/js/config.js"></script>
+
+    <!-- Our JS -->
+    <script type="text/javascript" src="static/js/logic.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.min.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.13.0/d3.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.9.1/d3-tip.js"></script>
+  <script type="text/javascript" src="static/js/sencond_chart.js"></script>
+
+  <!-- chart 3 -->
+  <script type="text/javascript" src="static/js/third_chart.js"></script>
+
+
+  </body>
+
+</html>
